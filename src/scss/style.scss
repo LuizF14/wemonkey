@@ -1,0 +1,11 @@
+// Sobrescrever variáveis do Bootstrap
+$primary: #c1d55a;
+$font-size-base: 1.1rem;
+
+// Importar Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Seus estilos
+body {
+  background-color: #f9f9f9;
+}
