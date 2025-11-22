@@ -5,12 +5,53 @@
     <title>WeMonkey</title>
 </head>
 
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-6">meio</div>
+<body class="bg-light">
+
+  <!-- Navbar estreita alinhada ao feed -->
+  <div class="feed-navbar">
+    <div class="container feed-container">
+      <h1 class="fw-bold" style="color:#7aff4b;">WeMonkey</h1>
+    </div>
+  </div>
+
+  <!-- Feed -->
+  <div class="container feed-container mt-4">
+
+    <!-- Post -->
+    <div class="card mb-3 shadow-sm border-0" style="border-radius:12px;">
+        <div class="card-body d-flex">
+
+            <!-- Avatar -->
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSExIVFRUVFxUXFRYVFRUVFhUVFRUWFxUXFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0NFRAPFy0dFR0tKysrKy0tLS0rKy0rLS0rKystLS0tKy03LS0rNzc3Kys3LS03Ny03Nzc3LSsrKy0rK//AABEIAMcA/QMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAACAwEEBQAGB//EADwQAAEDAgQDBgUEAQMCBwAAAAEAAhEDIQQxQVEFEmFxgZGhsfATIsHR4QYyQvEUUoKScqIVIyQzNFNi/8QAGAEBAQEBAQAAAAAAAAAAAAAAAQIAAwT/xAAdEQEBAQEBAQEBAQEAAAAAAAAAARECMSESQTID/9oADAMBAAIRAxEAPwD4wSllTKEpc46V7L9M8MoCn8WpdwuAfsvIYWkXOAC9DUe5jeWYhXwOmpxrjvMORghoXnMTiJS311XqOVWiQk1CHSvQcGxWh1XnaqsYLFEWU83KepsXuLVTzEBZTnFW8ZW5jKHD0uYpv2tPkVQwogxaADBspAa8GAtjaqUXwQvSNxTjEuOSx+H8OL6gbcDfQdT5rYrvFIcoJjWTBkK+fielDE8PqPdm1oN/mMfRP4dwwSGuqt5iLATY7SREqTi51Lu257AboauJEDK3c7pdbJ6Pr0VHgdNpBqvdy9CA76rV4fgnUSIqBxOQ6Z36x6ryOF4u4tLHibGJv3+KtUOIu5ZcbtENAPzCIFtxBN+iqCt79UcB/wAqmK1Jh5xmAJPYV874hhKtF3JWpuY6AYdsdt19B4fxY/LDiOYGRMG15I26q0/EMrAseGuBt8wBMHMNnLPNT1xrSvlPMpBXsOI/osuBfhgTEy1zm/8AaSZntXkTRcHchaeaY5YvO0LlebFIBRoA1NAUilIgVJCiViaxA8FQ2qpfUlAQED1LShcsyFyiFMJUWQhIRSoWVGnwLDS7nJsFa4vvOadw+hFCeqo442XXMifazgUDyiLUBUKgShFkYUwgnAiFZwwgFUAYVmjVVQWDNFp1haXCqAJycQNojrJKoUKXO6B39PytbFuI5WM+VgtzOGYGZ96q4mu4jXcLAgATrn4LJq8zzJdJ8vNdiXDe3m7uQ/CtLtdEX60Qwhu577eSgvB/1doKfyQBDR/uMJb2XJt3EIJjahABFx4FNGJIg7dMlSY4CYPcpGK9+81tbGvTxoceYWIjwn34qwzHEPLZgydbfNBWGx0naVcFSXB5zBg90RbxVTpOPQcNxz5ceaBOZBgXmeqrcdwbK01GEc9hzZcxvOpJ0Wfg8QXO5B1j8+S0KjOV5l7XPgSGXDe20Sq9gzHmKjC0wYkbLiVr8c4cWgVZkmzhtt2bLGC4dTKyJXEouRA4IKFKGVHMsTWLnhQwoyhJS5S5L5llehUtFwhVjBMJeITFV6Fr4pBoWRWdKt4qscslnVqmi61EIclEonuSnKK6SClSEDSrFOmtGvwHw0Eq9yJFKiHPAM3OmacErS4Of5Gwb6npv1UYus4kzYaXyC9PQ4CKVMEuZT3D/mf0PLYA9uS89xTAlskOL275eQzTufG/N9ZvPeR2cx+iYKgAPzR3SfwlNdFx3b92wUmiXXNhvp2DdYDcz/8ARI62QfAtYn0UMn+I7z90z4BOZH/JYl/B3XMZnaRHem/45UiiWmYsjGSwWEaf3fzRuJM7mL+qN1Pb8roIIHb/AEkBoktvkd5uZ2Vw4t5ADS2m0Rp5nUqs2gTJJ7FcvytDc/5HU2tHmqgrf4VSbVpkVX87CYPLDXcxykFea4/wsUKnyOL6bp5HGxsYLXdQtPhLoJaDIHeZ17VnfqaqeZjYAaASIEXJM/RHfgkZbUNUI6eSghcUq0IgE0sSysrXBMCWEwLNUOakkJ5cEsrNCFa4Y8h4hVpVzh7Lkqp66XxZxL5JKz62atVKqp1XSqqYFKcmApZU1cFSF1cpKlSzVykUwdHPctP9MsDXVMQQD8FvyA//AGOsD3XKx6jlrcO/+LVIzL2A90pvh/5zepA1qlSs4lzib9y6m7lBaTLb+KuYZgFKTaVlYnHM/aL9VMde79V2OB0/pMqP1zi3QdiS0a6adYUF5cb5DTtVOA2vJOfknU2bi26inS6gdk+a3OFYQZkTuTn3JCgcK6JblqMoVilTtJHb06r0TcIwgmN7k3O4ulNw7ACMiIjqDssr8sZ2GmIB8JQjCGcvVeppUWcun0uNkqq1rdBn7KzflmUsDYWyvko/8OvPhAv+FtsqN5d9DqAqT8cAYaO/6J0fmsZ2BDXNLe8XnOLLI/ULz8WDmIvqR13XuWFjmh9+Zo2ytovCcapu+JJETkt3/lPlVKJhEXKGoHFcUicUkhM5kKxiGBESoULFPKo5UbUULAhrLq835W9qq6plSpMBVCF6V8NWQULoVFVhKcrTBdKqtuixUpbE5rknJNaVoa5zytfgWIBZUpHN0Ob1Lcx4Se5ZcBPwJLXhzc23+n1jvWxubl1sVqhNMtGa881t7i69E483zN7xt0UcSoUwA8CHxcaTujF9fZsZTmOyyOvTohbS093RMfvrJPXfvNlcbTAEnOAel7jyV44ow7L5A7dFrU8WGgSb+8ik4WkIE5qpjzDpRaqRexHFqjrD9vqlN4gbc0xpfJZ3xnki0DzVasCJ+YlTro9EOKXsZtroq2L4gXATpssBrnaEq4ym4ibyEC3WieJECJjL2Eo8QaSQO06rIeTKu4GjzHKJzK2s3eAYkPqcvNIdIiOhzWNx/wD9yMrX/wCoEyvQ8L4YKVVrm9x2WZ+r3A1csyb76Ge9X7y5dzK88xM+Guailc0EvbCCVacAVXe2FjKEuRIA5G0rGpAXEpjUD1gk01wanuEprKVlUKqBAukFFiKhlQ1UcEHIOVdKNizEPauarNRoSXMQdRKt4ID922XaqjRotGoz4cN/lGW3amCmUMR8N3NnOY6Kxi8Qxwme5ZGIMoqYyHXyWVOshzSC7LKLeFlaotk3vJ8fwqLrH3rkrGGqx4Eek+SUtYOGQ/tE7DTdZ9OuZV+niTInLoir5qKlLT1hUquD1iFr0yx2fnB9UVZgsLk6DU/QKcdGFRw2o9FqYXD2MgK7TwpFz5J2Gh03y9FUkQyn8GLsh4bKzw7hpBtHmFs4RkGe5Hd/M6nZ7CQW6PA22PknIZcRhKZBGnXIX71479VO/wDUOueo+oXrn1//ACw9x6QbXOVl57Hmk4/O0E5BwcQYk6a5p/Pxy7u15xqeArHwKejah62Cc7h55ZaCekiR3Ln+ais1wQFHUkZpakwkhE1c5qgpUe0IoVcPKn4iBjYZRT6dJDTcr2FASZXneIYaHKu0QvR46gCVj4zDRkqbVApjCh5UdOndYm8pR06XMYAklMjQBWMA4M+ep8ogxyiXOJ/1GbBVEm4fB8kkNl410ZOUdVQq0/mtJkkl2fmrmI4sSIY0BvXXt3WdUruOZJJz7NgNAm400NNvMSf4jzKgH5rGLqHN8B4ImMiOnjopUOvSi5NzeOmi6k+IJ3PouoPEGczl2jNA3OTuP6SF4ugdsfdcxxJF9PJVy+SnYcIMX6FSMs/TqtThbSTzkGchOnYqODZIyH37Fp0ZDbT/AFqti5VirTP8bg5jIhY7vi4dxcGl7DJkZt3Dgtim+b8xO2XvdW2PaRe/qUKjPo8apOpyyXPIs3qd1rcHolsEmc5J1JN+5IpUKbSSGC6v4WoCYPj+Ew36qfqvCxRs2L81st14KrUvJcMsouSvp36iYP8AHeHagX69F8tLAw5kEFXXn/oqVY6x2Gbq9hcZymeUDz8is91UG55nHrCBjmncdpRrY3q9BmIbIDQ8bQJEbDVecxWGcxxacwtCi8NPykfXuKuFzaohwvoTp2lF5lHjz4Up+OoljoI/KQ265lxpqu5adOlKVVwZlZUXGOV7CvWY1ytYd6I4yrOKqbLO5S4q7yFyaKHKErjIr4XUKs2ZgC62aFEuf01XVcKzmJLiANh7KuTVarYfBn9zz2NtHegrzOcxkALDoAnYzHzYExqLCffaqRcDrfoqDn7mZ2KGoQzWXHPYTohqOi5MnQbdVXcRr/aNVIb8Sbaa9UI8yupuHdqlVH3nwUnDqbgDfYiOqMUyT4pLmk3RMrk2lLYs02WPTzVrDusbdFWp2bfL1M/2rAz8I6bpS1cG0xzXjJW8vyqArGGjoI97InuLsnQE1XLVZiAidXzyCyhTA/c9/wDtgfRd8KjGdT/kVDtGi/GAajxUN4w2QGy9xj5WguPgFnNGHH8HH/qc4hXsLjA2G02hgOjQB6IPxscWrPdQiqzkmIBde4OcbWsvBOxBBIdpr06lez/UDyabWzdolw1vr3Lxga43tPUZjddb481y2ltPMbeY+qGpSM3t1GSFz3NOQHYI9E9tUuBy5ttHD7qWJ5IsYPXUJ1IEHORuNO1LombHuJzH4TG0XN1sfd1oxuMaHAZTvOYVVlGFpNZLY6ylVqJU9tPA0nAJprBZ/MQbo2vUJtoiEXOk1wWuIKBritjnI3+D/MYXoP8AAC85wclvzEWWxieIHlke9F0kXC8aWMBbAJ9O9efxNbmsDYTO3kgxmILnQDJ1Og6JdV3IAAb6dOvaqUW5rBnc7BJqMJg5DtlWKdIAczrnb7qvXqTr3BBAaZN89Et9O3Xc5BWiORkm8qqahJk/gdgQqFkoZ1VhtOxJ1sEot2upKGmUE3TGhA9qzLNOvMztA7lba6BO4BH2WU6dVcoYz9oOkhVKLy1Gu+Wczp0AgBTTefW3oq1OpLYncjqPYS2uzjpCpLQp1pHj/aEOOenuUsOAIEZg/VR8WB2x5owzoxzbwtjg+H+eTpfsWU27t9PBaOGxgac/VPMHXRn6lrFwMH5h49e1ecw1czDh2Ht+/wBFa4tiw4yDYmZByVNrDMaZgpt+pnhr2yOzM/fZJ/xHfxuRpr3JzqkTaCbSPqNkFOvykfxOhBt+EFWLzN7H17UxmLLU/HN+I3nH7m/uHTcLPa6UeFq4KtfcdL26KwHyenVZmDrlhtqFt8Pp84nxRfsYylw8OEpb8C0FajTAhVK7BKMAHMpVjLoEKKn+OzISVjh8InVQRfTZdBi7UxXNYQBr0CRWq6CcsyfsgpOBEDICSdezaUtzwBqZ2OXQlYkVHgWCWxhmSiLNTnp06garnPt036/UqSCq4mws31RUWgXjL3HagmchJ9Eb3AfKL7nc69yGC+XmTPTYdiU5v46qxnrpfs2AQl03tYW6FYkkGQEb6MBRSN1PN4IYDGCYOV0urTjsKsMbKhtCbLFSLVBCtuo72VdwRitAHndW6eKvfL67qsGhQ5sLfWyVqCuD2jJQ3EibrOkx2LmuKr9J/LVdjIFt8uzVA7F3HdPQGypB17+5RfDkkSnRkPLYjUGR3ym4d0G/7T5bpDXCIO8/dS2YPvVbQtVxGkjcKHNBaJ7j06oC82OhEEaGFYfaDHykCR7yTPoqu6nymRfWOiqVQJMRB02WnisJ8ge0yBcH1CpYikeWYBkTOvYVrDKXSdDh3L1OEcGzGRgheWpDVe24Tw9j6YcXDJS1U8RiBCzHYglW+MU20zAMhZvxWhGNqp8VQ+sqoqp+AoFzwSJaLn6eadOLNUOaOQD5ib9uyhzg0Bt7jw6qx8QMbzuEkzyg7b9Z+hVBkuJJ7zukGQAOZ2Wg1d9khzy45RsBkOgCl8k3KhzoQwnu5RA7z9FFMJKYHwO1Ym1XQCBrqlgwD5ISfsFDjMBZjsOI8PPJA+1hv5BEXQOp9Etpk+9lmOoGx3EEKzTF/RV6LcirDneIQUVKUrPe2NFoU6kpddgKzKAGaLlkAa6fZTGikjTIrNoC2M8/VALOtf3kVadfPMevsJdU/wAo7e1bGlQ6CJGgUzADtZIPcg29hMY35Y6/hZjnwQCNr9oXNFpQUDYhHTMGDkUg0Pkdqfh6sgNOgkHs0PRUhYlpTaI21BA6HRMorQFblEafuH199FUfRkuaCR/Jh0OaNsvZE5Tn1MhPwrecDIPa0id4v9Cr9T4ymSNM1qcOqP5A0EgLMLg64HbC2OFP/iDop5mm1W4jTeLkysl8ra4g52RWZKLPrSqAWtgmO5STbmtt3rawvBmAfEMEC8ad6zOJVy5xFoByH7R7hac4f1qlVdJznlsFBdaBbqhLfWFz/JDA5wNJQOuVzioFkERUc3vohnVCsRtd+FzylyuJQcPfp0CFkhCSppOzSDaZOaa6pdJm09xXB6wGTymQU74s5+wq4IjNRMW8OxLCqDVTSgjl10+yAlcxs5Z+oQxhZIkZjRLmJ/0nMJrnZO1yPXqlON8u3r+Us4gZeB2XUDmhOfu6W2QUE7qjdofeaVBsU/mERt9UhFS7vJFdpjVpQVzJ7QPFPpEmHbWPUfdYU0tMSPeqs06w5S/bPvt91SpVDB8E7BvsQRIIgg63y7cu9XKMZ4YdE7A1i1wIMJDjykgTY2nPvT8PWvcDthRPTV/F3+bxWS8XW7UYPhki6xyFXQj0bapNGJgGCTqdIH5WNiyAeUWj3nquXKuvBypsNvGUgvKhcuVXElQ4rlyxQ8qAuXIMCSoK5cgibKJrVy5Iom9qY8LlyUo5bImNkKVyWdy2nZSYIkWKhcsyXOnOyGN8wpXLMgj7rnNi+0LlyzCt72UhmY2HouXLMXzQR0TqdaDMWOi5chkO6FWHOBYYGeXSI/K5cqgZ9WqXGTn6o27rlyDfGxgcUYiAQVS4g6HZAW0ULlV8T/X/2Q=="
+                class="rounded-circle me-3"
+                width="48" height="48">
+
+            <!-- Conteúdo do tweet -->
+            <div>
+
+            <!-- Nome + @usuario -->
+            <div class="d-flex align-items-center mb-1">
+                <span class="fw-bold me-1">Cézar</span>
+            </div>
+
+            <!-- Texto -->
+            <p class="mb-2">
+                Vamos fazer a revolução dos macacos.
+            </p>
+
+            <img src="https://picsum.photos/600/350"
+           class="img-fluid rounded mb-2 border border-1" />
+
+            <!-- Ícones igual Twitter -->
+            <div class="d-flex text-muted" style="font-size: 0.9rem;">
+                <span class="me-4" style="cursor:pointer;">💬 12</span>
+                <span class="me-4" style="cursor:pointer;">❤️ 57</span>
+            </div>
+
+            </div>
         </div>
     </div>
 
+  </div>
 </body>
 </html>

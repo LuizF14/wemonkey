@@ -1,5 +1,5 @@
 // Sobrescrever variáveis do Bootstrap
-$primary: #c1d55a;
+$primary: #9acd00;
 $font-size-base: 1.1rem;
 
 // Importar Bootstrap
@@ -8,4 +8,18 @@ $font-size-base: 1.1rem;
 // Seus estilos
 body {
   background-color: #f9f9f9;
+}
+
+.feed-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Largura do feed (e da navbar) */
+.feed-container {
+    max-width: 700px;
 }
