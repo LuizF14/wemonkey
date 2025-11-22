@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/style.css" />
+        <title>WeMonkey</title>
+    </head>
+
+    <body>
+        <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+            <div class="card shadow p-4" style="max-width: 380px; width: 100%;">
+                <h3 class="text-center mb-3">Entrar</h3>
+
+                <div class="text-center mb-3">
+                    <img id="avatarPreview" src="avatars/avatar1.jpeg" alt="Avatar">
+                </div>
+
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Nome de usuário</label>
+                        <input type="text" class="form-control" placeholder="Seu nome de usuário">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Senha</label>
+                        <input type="password" class="form-control" placeholder="Sua senha">
+                    </div>
+
+                    <label class="form-label">Escolha seu avatar:</label>
+                    <div class="d-flex gap-3 mb-4 justify-content-center">
+                        <img src="avatars/avatar1.jpeg" class="avatar-option avatar-selected" onclick="selectAvatar(this)">
+                        <img src="avatars/avatar2.jpg" class="avatar-option" onclick="selectAvatar(this)">
+                        <img src="avatars/avatar3.jpeg" class="avatar-option" onclick="selectAvatar(this)">
+                    </div>
+
+                    <button class="btn btn-primary w-100">Entrar</button>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            function selectAvatar(img) {
+                document.querySelectorAll('.avatar-option').forEach(el => {
+                    el.classList.remove('avatar-selected');
+                });
+
+                img.classList.add('avatar-selected');
+
+                document.getElementById('avatarPreview').src = img.src;
+            }
+        </script>
+
+    </body>
+</html>

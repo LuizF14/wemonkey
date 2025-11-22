@@ -7,4 +7,8 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
 });
 
+app.get("/signin", (req, res) => {
+  res.sendFile(__dirname + "/public/signin.html");
+});
+
 app.listen(3000, () => console.log("Servidor rodando http://localhost:3000"));
